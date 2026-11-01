@@ -1,0 +1,1 @@
+Apply migrations in lexical order to a disposable Postgres 16 + PostGIS database. CI runs the initial migration with ON_ERROR_STOP. The initial migration was validated on a disposable local PostGIS 16-3.4 container; all four RLS flags were confirmed. No hosted database exists. RLS intentionally has no public read/write policies. No synthetic seed is inserted into live tables.

@@ -1,0 +1,1 @@
+Deterministic matching comes first. No model training until licensed observations, leakage-safe splits, baseline performance and calibration exist. Initial weights in the specification are hypotheses, not validated scores.

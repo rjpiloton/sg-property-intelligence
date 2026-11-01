@@ -1,0 +1,42 @@
+{
+  "name": "sg-property-intelligence",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "services/api",
+    "packages/shared",
+    "packages/investment"
+  ],
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "vite apps/web --host 0.0.0.0",
+    "build": "vite build apps/web",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build",
+    "test:ingestion": "python -m unittest discover -s services/ingestion/tests -v"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^10.14.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^7.1.12",
+    "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.16",
+    "echarts": "^6.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.16",
+    "zod": "^4.1.12"
+  }
+}
